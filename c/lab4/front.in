@@ -1,0 +1,26 @@
+5 REM X:15,Y:10
+10 INPUT X, Y
+20 LET A = X + Y
+30 LET B = X - Y
+40 LET C = X * Y
+50 LET D = X / Y
+60 PRINT "add:", A
+70 PRINT "sub:", B
+80 PRINT "mul:", C
+90 PRINT "div:", D
+100 IF X > Y THEN PRINT "X > Y"
+110 IF X < Y THEN PRINT "X < Y"
+120 IF X = Y THEN PRINT "X = Y"
+130 IF X >= Y THEN PRINT "X >= Y"
+140 IF X <= Y THEN PRINT "X <= Y"
+150 IF X <> Y THEN PRINT "X <> Y"
+160 LET E = A * B + D
+170 PRINT "complex:", E
+180 GOSUB 500
+190 GOTO 999
+200 PRINT "unreachable"
+500 LET A = A + X
+510 PRINT "subroutine A:", A
+520 RETURN
+999 END
+RUN
